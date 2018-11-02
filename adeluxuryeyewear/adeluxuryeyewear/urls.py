@@ -12,7 +12,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('', views.index, name='index')
+    path('', include('ade.urls'))
 ]
 
 urlpatterns += [
