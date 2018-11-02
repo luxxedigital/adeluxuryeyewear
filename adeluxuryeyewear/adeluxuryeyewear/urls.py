@@ -1,18 +1,18 @@
-"""root urlConf"""
+"""Root url conf. """
 
 from django.contrib import admin
 from django.conf.urls import url, include
-from django.urls import include, path
+from django.urls import path
 from . import views
 
+# URL Routes #
 
-# we can change the name of the uris later
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 
 urlpatterns += [
-    path('', include('ade.urls'))
+    path('ade/', include('ade.urls'))
 ]
 
 urlpatterns += [
