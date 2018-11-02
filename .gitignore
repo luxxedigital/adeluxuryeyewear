@@ -1,3 +1,5 @@
 .vscode
 adeluxuryeyewear/adeluxuryeyewear/settings.py
 .idea
+__pycache__/
+*.pyc
