@@ -34,7 +34,3 @@ urlpatterns += [
 urlpatterns += [
     path('checkout/', include('checkout.urls'))
 ]
-
-urlpatterns += [
-    path('users/', include('users.urls'))
-]
