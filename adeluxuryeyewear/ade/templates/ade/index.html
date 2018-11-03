@@ -1,7 +1,26 @@
 {% extends 'ade/base_layout.html' %}
 
 {% block navbar %}
-<h1>Navbar goes here</h1>
-<h3>{{ message }}</h3>
+<!--<h3>{{ message }}</h3>-->
+
+
+<div class="ui top attached demo menu">    
+    <a id="toggle" class="item">
+        <i id="sidebar-icon" class="sidebar icon"></i>
+          Menu
+    </a>
+    <h1 class="ui right aligned header" style="margin-left: auto; margin-right: auto">ADE LUXURY WEAR</h1> 
+
+</div>
+<div class="ui bottom attached segment pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+        <a class="item"> Home </a>
+        <a class="item"> Collections </a>
+        <a class="item"> About </a>
+        <a class="item"> Contact </a>
+    </div>
+</div>
 
 {% endblock %}
+
+
