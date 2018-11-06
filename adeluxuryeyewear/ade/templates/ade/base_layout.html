@@ -15,6 +15,15 @@
         
         <style>
        
+       html{
+           
+           overflow-y: hidden;
+       }
+
+       .no-scrollbar{
+           overflow-y: hidden;
+       }
+      
 
         .main-carousel{
             width: 100%;
@@ -35,6 +44,12 @@
         #header-title{
             color: #fff;
         }
+
+        .center-text{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
 
         
         .carousel-content{
@@ -99,11 +114,37 @@
 
     </head>
 
-    <body>
+    <body class="index pushable">
         
-        {% block navbar %}
+        <!-- Navigation -->
+        <div class="ui sidebar vertical left inverted menu">
+            <a class="item"> Home </a>
+            <div class="item">
+                <div class="header">Collections</div>
+                <div class="menu">
+                    <a class="item"> Kings Line </a>
+                    <a class="item"> Queens Line </a>
+                    <a class="item"> Unisex Line </a>
+                </div>
+            </div>
+            <a class="item"> About </a>
+            <a class="item"> Contact </a>
+            <a class="item"> Terms & Conditions </a>
+            <a class="item"> Refund Policy </a>
+            <a class="item"> Privacy Statement </a>
         
-        {% endblock %}
+        </div>
+        
+        <div class="ui inverted icon top fixed menu" style="background-color: #000">
+            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
+            <h1 id="header-title" class="center-text">ADE LUXURY WEAR</h1>
+        </div>
+
+        <!-- End Navigation -->
+            
+                
+            
+                    
 
        
 
