@@ -1,24 +1,79 @@
-/** { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+ .main-carousel{
+     width: 100%;
+ }
+ 
+ .main-carousel img {
+    display: block;
+    width:100%;
+    height: 500px;
+ }
 
-.carousel {
-background: #EEE;
-}
+ .carousel-cell{
+    display: block;
+    width:100%;
+    height: 500px;
+ }
 
-.main-carousel img {
-display: block;
-width:100%;
-height: 500px;
+.white{
+     color: #fff !important;
+ }
 
-}
+ .center-text{
+    margin-left: auto;
+    margin-right: auto;
+ }
 
-.header-title{
-    color: red;
-}
+ /* footer */
+ .footer a{
+     color: #fff;
+ }
 
-@media screen and ( min-width: 768px ) {
-.carousel img {
-    height: 400px;
-}
-}*/
+ .carousel-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 20; /*enables text in front of image */
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+ }
+
+ /* big buttons, no circle */
+ .flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+ }
+ /* arrow color */
+ .flickity-prev-next-button .arrow {
+    fill: white;
+ }
+ .flickity-prev-next-button.no-svg {
+    color: white;
+ }
+ .flickity-prev-next-button:hover {
+    background: transparent;
+ }
+ /* hide disabled button */
+ .flickity-prev-next-button:disabled {
+    display: none;
+ }
+
+ /* position dots in gallery */
+ .flickity-page-dots {
+    bottom: 5px;
+ }
+ /* white circles */
+ .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+ }
+ /* fill-in selected dot */
+ .flickity-page-dots .dot.is-selected {
+    background: white;
+ }
