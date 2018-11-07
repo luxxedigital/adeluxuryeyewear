@@ -8,7 +8,7 @@ About us | ADE
 {% block content %}
 
 <div class="ui container">
-    <div class="ui two column centered grid">
+    <div class="ui two column centered stackable grid">
         <div class="column">
             <!-- Might want to load this text from server instead -->
             <p>
@@ -24,14 +24,12 @@ About us | ADE
             </p>
         </div>
     </div>
-</div>
-<div class="ui container">
-    <div class="ui two column grid">
+    <div class="ui stackable two column grid">
         <div class="row">
-            <div class="8 wide column">
+            <div class="eight wide column">
                 <img class="ui fluid image" src="{% static 'img/dr_adesola_fadeyi.jpg' %}">
             </div>
-            <div class="8 wide column">
+            <div class="eight wide column">
                 <div class="ui segment">
                     <p>29, Nigerian-Yoruba born, Texan native. During his studies at The Nova Southeastern College of Optometry, Dr. Fadeyi always displayed a high level of passion and a keen eye for frame design, frame styling, and luxury fashion.</p>
                     <p>Practicing amongst some of the country's most educated individuals, Dr. Fadeyi's sense of style and charisma was never far. He was named "Best Dressed" in his college by his peers and his faculty. Dr. Fadeyi is always privy to details and looking his best. Let Dr. Fadeyi help you add the most important fashion accessory to your perfect outfit. His motto is “everyone deserves to feel and look like royalty.”</p>
@@ -41,4 +39,21 @@ About us | ADE
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block footer %}
+<div class="ui">
+    <div class="ui stackable grid">
+        <div class="row one column padded grid">
+            <div class="black column">
+                <a href="#">Terms and conditions</a>
+                <br>
+                <a href="#">Refund Policy</a>
+                <br>
+                <a href="#">Privacy statement</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
