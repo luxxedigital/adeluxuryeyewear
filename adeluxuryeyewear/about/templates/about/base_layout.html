@@ -3,11 +3,28 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-        <link rel="stylesheet" href="{% static 'css/ade_about.css' %}">
+        <!--<link rel="stylesheet" href="{% static 'css/ade_about.css' %}">-->
+
+
+        <style>
+        .white{
+            color: #fff;
+        }
+
+        .center-text{
+            margin-left: auto;
+            margin-right: auto;
+        }
+            
+        </style>
     </head>
     
-    <body>
+    <body class="index pushable">
         
         <!-- Navigation -->
         <div class="ui sidebar vertical left inverted menu">
@@ -25,28 +42,36 @@
             <a class="item"> Terms & Conditions </a>
             <a class="item"> Refund Policy </a>
             <a class="item"> Privacy Statement </a>
+        
         </div>
+        
         <div class="ui inverted icon top fixed menu" style="background-color: #000">
             <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
-            <h1 id="header-title" class="center-text">ADE LUXURY WEAR</h1>
-        </div><!-- End Navigation -->
+            <h1 class="center-text white">ADE LUXURY WEAR</h1>
+        </div>
+
+        <!-- End Navigation -->
             
+                
         {% block content %}
+        
         {% endblock %}
 
         {% block footer %}
         {% endblock %}
 
+
+
         <script>
             $('#toggle').on('click', function(){
                 $('.ui.sidebar').sidebar('toggle');
             });
+
         </script>
 
-        <script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
     </body>
 </html>
