@@ -1,0 +1,44 @@
+{% extends 'about/base_layout.html' %}
+{% load static %}
+
+{% block title %}
+About us | ADE
+{% endblock %}
+
+{% block content %}
+
+<div class="ui container">
+    <div class="ui two column centered grid">
+        <div class="column">
+            <!-- Might want to load this text from server instead -->
+            <p>
+                ADE<br>:
+                ADE in the Yoruba culture means “to crown”. The prefix name ADE is usually given to a child during birth as a designation of royalty or coming from royal descendants. Dr. Fadeyi, having a great grandfather who was a King in the town of Awe in Lagos, Nigeria fortunately was blessed with the opportunity to bear the ADE name.
+            </p>
+            <p>
+                Dr. Fadeyi has an extensive training in advanced optics, frame design and lens materials. He is committed to providing the highest quality products in the industry for his customers.
+            </p>
+            <p>
+                With his strong fashion forward sense, these culture-inspired sunglasses are meant to be the perfect accessory to your perfect outfit. No matter the season, allow yourself to experience the way it truly feels to look like royalty. 
+                “Loyalty, Got ROYALTY inside your DNA...”  -Kendrick Lamar
+            </p>
+        </div>
+    </div>
+</div>
+<div class="ui container">
+    <div class="ui two column grid">
+        <div class="row">
+            <div class="8 wide column">
+                <img class="ui fluid image" src="{% static 'img/dr_adesola_fadeyi.jpg' %}">
+            </div>
+            <div class="8 wide column">
+                <div class="ui segment">
+                    <p>29, Nigerian-Yoruba born, Texan native. During his studies at The Nova Southeastern College of Optometry, Dr. Fadeyi always displayed a high level of passion and a keen eye for frame design, frame styling, and luxury fashion.</p>
+                    <p>Practicing amongst some of the country's most educated individuals, Dr. Fadeyi's sense of style and charisma was never far. He was named "Best Dressed" in his college by his peers and his faculty. Dr. Fadeyi is always privy to details and looking his best. Let Dr. Fadeyi help you add the most important fashion accessory to your perfect outfit. His motto is “everyone deserves to feel and look like royalty.”</p>
+                    <p>Dr. Fadeyi currently is working out of five offices in the Rio Grand Valley area in Texas. He his happily married to his beautiful wife Dr. Brenda Fadeyi, O.D., who also is an Optometrist.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
