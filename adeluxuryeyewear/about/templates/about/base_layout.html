@@ -8,9 +8,7 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-        <!--<link rel="stylesheet" href="{% static 'css/ade_about.css' %}">-->
-
-
+        <link rel="stylesheet" href="{% static 'css/ade_about.css' %}">
         <style>
         .white{
             color: #fff;
@@ -29,38 +27,27 @@
         <!-- Navigation -->
         <div class="ui sidebar vertical left inverted menu">
             <a class="item"> Home </a>
-            <div class="item">
-                <div class="header">Collections</div>
-                <div class="menu">
-                    <a class="item"> Kings Line </a>
-                    <a class="item"> Queens Line </a>
-                    <a class="item"> Unisex Line </a>
-                </div>
-            </div>
+            <a class="item"> All Collections </a>
+            <a class="item"> Shop Men </a>
+            <a class="item"> Shop Woman </a>
+            <a class="item"> Shop Unisex </a>
             <a class="item"> About </a>
             <a class="item"> Contact </a>
             <a class="item"> Terms & Conditions </a>
             <a class="item"> Refund Policy </a>
             <a class="item"> Privacy Statement </a>
-        
         </div>
-        
         <div class="ui inverted icon top fixed menu" style="background-color: #000">
-            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
+            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu </a>
             <h1 class="center-text white">ADE LUXURY WEAR</h1>
         </div>
-
         <!-- End Navigation -->
             
-                
         {% block content %}
-        
         {% endblock %}
 
         {% block footer %}
         {% endblock %}
-
-
 
         <script>
             $('#toggle').on('click', function(){

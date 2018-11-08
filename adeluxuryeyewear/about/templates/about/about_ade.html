@@ -1,4 +1,4 @@
-{% extends 'ade/base_layout.html' %}
+{% extends 'about/base_layout.html' %}
 {% load static %}
 
 {% block title %}
@@ -9,7 +9,7 @@ About us | ADE
 
 <div class="pusher">
 <div class="ui container">
-    <div class="ui two column centered stackable grid">
+    <div class="ui column centered stackable grid">
         <div class="column">
             <!-- Might want to load this text from server instead -->
             <p>
@@ -45,17 +45,32 @@ About us | ADE
 {% block footer %}
 <div class="ui">
     <div class="ui stackable grid">
-        <div class="row one column padded grid">
+        <div class="row center aligned">
             <div class="black column">
-                <a href="#">Terms and conditions</a>
-                <br>
-                <a href="#">Refund Policy</a>
-                <br>
+                SOCIAL MEDIA HERE (Icons)
+            </div>
+        </div>
+        <div class="row center aligned">
+            <div class="black column">
+                NEWS LETTER HERE (Input)
+            </div>
+        </div>
+        <div class="six column centered row center aligned">
+            <div class="black wide column">
+                <a href="#">Refund Policy</a><br>          
+            </div>
+            <div class="black wide column">
+                <a href="#">Terms and conditions</a><br>
+            </div>
+            <div class="black wide column">
                 <a href="#">Privacy statement</a>
             </div>
         </div>
+        <div class="row center aligned">
+            <div class="black column">
+                ADE Luxury Eyewear @ 2018
+            </div>
+        </div>
     </div>
-</div>
-
 </div>
 {% endblock %}
