@@ -1,12 +1,14 @@
 {% extends 'ade/base_layout.html' %}
+{% load static %}
 
 
 
 <!-- Body -->
-{% block content %}
-<div class="pusher"><!-- Similar to container to see all page -->
-        <!-- Carousel will go here -->
-        <div class="main-carousel"  data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+{% block content %}    
+
+<div class="ui bottom attached ">
+        <!-- Carousel -->
+        <div class="main-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
             <div class="carousel-cell">
                 <img src="https://wallpapercave.com/wp/T6yypye.jpg" alt="orange tree" />
                 
@@ -33,106 +35,89 @@
                 </div>
             </div>
             
-        </div><!-- End carousel -->
-        
-        <div class="ui grid container doubling stackable" style="margin-top:20px; ">
-        
-            <div class="four wide column">
-                <img class="ui small centered circular  image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    FEATURED COLLECTION<br><br>
-                    $70.00
-                </div>
-            </div>
-
-
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    KINGS LINE<br><br>
-                    $75.00
-                </div>
-            </div>
-
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    QUEENS LINE<br><br>
-                    $65.00
-                </div>
-            </div>
-
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    UNISEX LINE<br><br>
-                    $70.00
-                </div>
-            </div>
-
+        </div>
+        <!-- End carousel -->
+    
+        <div class="ui container">
+            <div class="ui huge header">FEEL LIKE ROYALTY IN ANY OF OUR COLLECTIONS</div>
+            <hr>
+            
         </div>
         
-        <div class="ui grid container doubling stackable" style="margin-top:20px; ">
-        
-            <div class="four wide column">
-                <img class="ui small centered circular  image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    FEATURED COLLECTION<br><br>
-                    $70.00
+        <div class="ui container featured-products">
+            <div class="ui grid doubling stackable">
+                <div class="four wide column">
+                    <img class="ui medium centered  image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022">
+                    <div class="ui center aligned basic segment">
+                        FEATURED COLLECTION<br><br>
+                        $70.00
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    KINGS LINE<br><br>
-                    $75.00
+                <div class="four wide column">
+                    <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_MAN_MODERN_TIMES_BLACK_FRONT_1024x1024.jpg?v=1529339266">
+                    <div class="ui center aligned basic segment">
+                        KINGS LINE<br><br>
+                        $75.00
+                    </div>
                 </div>
-            </div>
 
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    QUEENS LINE<br><br>
-                    $65.00
+                <div class="four wide column">
+                    <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_SAHARA_MINI_MATTE_BLACK_PURPLE_FADE_FRONT_1024x1024.jpg?v=1538412662">
+                    <div class="ui center aligned basic segment">
+                        QUEENS LINE<br><br>
+                        $65.00
+                    </div>
                 </div>
-            </div>
 
-            <div class="four wide column">
-                <img class="ui small centered circular image" src="https://semantic-ui.com/images/wireframe/square-image.png">
-                <div class="ui center aligned basic segment">
-                    UNISEX LINE<br><br>
-                    $70.00
-                </div>
-            </div>
-
-        </div><!-- End second row -->
-
-
-    <!-- Footer -->
-    <div class="ui vertical inverted footer segment">
-        <div class="ui center aligned container">
-            <div class="ui stackable grid">
-                <div class="eight wide column">
-                    <div class="ui celled horizontal list">
-                        <div class="item white"><a href="#"> About </a></div>
-                        <div class="item"><a href="#"> Contact </a></div>
-                        <div class="item"><a href="#"> Terms & Conditions </a></div>
-                        <div class="item"><a href="#"> Refund Policy </a></div>
-                        <div class="item"><a href="#"> Privacy Statement </a></div>
-
+                <div class="four wide column">
+                    <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_MOD_STAR_GOLD_GREEN_FRONT_1024x1024.jpg?v=1539884570">
+                    <div class="ui center aligned basic segment">
+                        UNISEX LINE<br><br>
+                        $70.00
                     </div>
                 </div>
             </div>
+        </div><!-- End collections grid row -->
+
+        <div class="ui grid container black-bg" style="margin-bottom:50px">
+            <div class="ten wide column">
+                <img class="ui huge image padded-img" src="https://semantic-ui.com/images/wireframe/image.png">
+            </div>
+            <div class="six wide column middle aligned">
+                <h3 class="white" style="margin-right: auto; margin-left: auto;">SHOP OUR AMAZING STYLES TODAY</h3>
+                <button class="ui huge inverted standard button">SHOP NOW</button>   
+                             
+            </div>
         </div>
-    </div>
+        
+
+        <!-- Footer -->
+        <div class="ui vertical inverted footer segment">
+            <div class="ui center aligned container">
+                <div class="ui stackable grid">
+                    <div class="eight wide column">
+                        <div class="ui celled horizontal list">
+                            <div class="item white"><a href="#"> About </a></div>
+                            <div class="item"><a href="#"> Contact </a></div>
+                            <div class="item"><a href="#"> Terms & Conditions </a></div>
+                            <div class="item"><a href="#"> Refund Policy </a></div>
+                            <div class="item"><a href="#"> Privacy Statement </a></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Footer -->
 
 
 
-</div><!-- End pusher -->
+    
 
+</div> <!-- End bottom attached segment -->
 
+</div> <!-- pusher from base-layout -->
 {% endblock %}
 
 
