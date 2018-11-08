@@ -1,20 +1,33 @@
 
  .main-carousel{
      width: 100%;
+     margin-bottom: 100px;
  }
  
  .main-carousel img {
     display: block;
     width:100%;
-    height: 500px;
+    height: 700px;
  }
 
  .carousel-cell{
     display: block;
     width:100%;
-    height: 500px;
+    height: 700px;
  }
 
+
+ /* removes divider line on menu */
+ .ui.menu .item::before{
+     content: none;
+ }
+ .black-bg{
+     background-color: #000;
+ }
+
+ .padded-img{
+    padding:20px;
+ }
 .white{
      color: #fff !important;
  }
@@ -22,6 +35,15 @@
  .center-text{
     margin-left: auto;
     margin-right: auto;
+ }
+
+ .featured-products{
+    margin-top:20px; 
+    margin-bottom: 30px;
+ }
+
+ .first-banner{
+     margin-bottom:150px;
  }
 
  /* footer */
