@@ -6,6 +6,28 @@ a:hover{
     text-decoration: underline;
 }
 
+/* Main container */
+.container{
+    padding: 5em 0 5em 0;
+}
+#header, #footer{
+    background-color: #211d23;
+}
+
+/* Footer */
+
+#footer{
+    color: white;
+    padding-top: 2.5em;
+    padding-bottom: .5em;
+}
+#footer .sm-icon{
+    padding: .50em;
+}
+#footer .sm-icon:hover{
+    cursor: pointer;
+    color: greenyellow;
+}
 /*--- Mobile only ---*/
 
 

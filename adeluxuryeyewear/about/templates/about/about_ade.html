@@ -10,10 +10,14 @@ About us | ADE
 <div class="pusher">
 <div class="ui container">
     <div class="ui column centered stackable grid">
-        <div class="column">
-            <!-- Might want to load this text from server instead -->
+        <div class="row">
+            <div class="column">
+                <div class="ui huge header">What is ADE?</div>
+            </div>
+        </div>
+        <div class="two column row">
+            <div class="four column">
             <p>
-                ADE<br>:
                 ADE in the Yoruba culture means “to crown”. The prefix name ADE is usually given to a child during birth as a designation of royalty or coming from royal descendants. Dr. Fadeyi, having a great grandfather who was a King in the town of Awe in Lagos, Nigeria fortunately was blessed with the opportunity to bear the ADE name.
             </p>
             <p>
@@ -23,6 +27,14 @@ About us | ADE
                 With his strong fashion forward sense, these culture-inspired sunglasses are meant to be the perfect accessory to your perfect outfit. No matter the season, allow yourself to experience the way it truly feels to look like royalty. 
                 “Loyalty, Got ROYALTY inside your DNA...”  -Kendrick Lamar
             </p>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="ui huge header">Dr. Adesola Fadeyi</div>
+            </div>
         </div>
     </div>
     <div class="ui stackable two column grid">
@@ -43,31 +55,37 @@ About us | ADE
 {% endblock %}
 
 {% block footer %}
-<div class="ui">
+<div id="footer" class="ui">
     <div class="ui stackable grid">
         <div class="row center aligned">
-            <div class="black column">
-                SOCIAL MEDIA HERE (Icons)
+            <div class="column">
+                <div class="ui large header">Let's stay connected!</div>
+                <div class="ui medium header">@adeluxury</div>
+                <span class="sm-icon"><i class="fab fa-instagram"></i></span>
+                <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
+                <span class="sm-icon"><i class="fab fa-twitter"></i></span>
             </div>
         </div>
-        <div class="row center aligned">
-            <div class="black column">
-                NEWS LETTER HERE (Input)
+        <div class="row centered">
+            <div class="newsletter-form ui form">
+                <div class="field">
+                    <label>Subscribe to our newsletter</label>
+                    <input type="text" placeholder="Email">
+                </div>
             </div>
         </div>
         <div class="six column centered row center aligned">
-            <div class="black wide column">
+            <div class="wide column center aligned">
                 <a href="#">Refund Policy</a><br>          
             </div>
-            <div class="black wide column">
+            <div class="wide column center aligned">
                 <a href="#">Terms and conditions</a><br>
             </div>
-            <div class="black wide column">
+            <div class="wide column center aligned">
                 <a href="#">Privacy statement</a>
-            </div>
         </div>
         <div class="row center aligned">
-            <div class="black column">
+            <div class="column">
                 ADE Luxury Eyewear @ 2018
             </div>
         </div>
