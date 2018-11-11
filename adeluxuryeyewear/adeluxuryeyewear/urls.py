@@ -18,11 +18,11 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('about/', include('about.urls'))
+    path('about/', include('about.urls'), name='about')
 ]
 
 urlpatterns += [
-    path('contact/', include('contact.urls'))
+    path('contact/', include('contact.urls'), name='contact')
 ]
 
 urlpatterns += [
@@ -30,9 +30,9 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls'), name='collections')
 ]
 
 urlpatterns += [
-    path('checkout/', include('checkout.urls'))
+    path('checkout/', include('checkout.urls'), name='checkout')
 ]
