@@ -41,7 +41,6 @@ class Review(models.Model):
     username = models.CharField(max_length=50)
     review = models.TextField()
     date = models.DateField(auto_now_add=True)
-    rating = models.ForeignKey("Rating", on_delete=models.CASCADE)
     product_id = models.ForeignKey("Product", on_delete=models.CASCADE)
 
 class Rating(models.Model):
