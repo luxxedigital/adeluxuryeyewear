@@ -36,3 +36,8 @@ urlpatterns += [
 urlpatterns += [
     path('checkout/', include('checkout.urls'), name='checkout')
 ]
+
+# Route for backend-testing
+urlpatterns += [
+    path('bendplay/', include('backend_playground.urls'))
+]
