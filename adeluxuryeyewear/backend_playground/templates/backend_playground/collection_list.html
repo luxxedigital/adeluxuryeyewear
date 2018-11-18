@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<!--
+    TODO:   Make the sortby-price link have a dynamic parameter set to the page's eyewear line, i.e., Unisex.
+            Right now, it is hardcoded to the King's Line with KL.
+-->
+<body>
+    <h1>Filter by</h1>
+    <a href="{% url 'collection-all' %}">All</a>
+    <a href="{% url 'collection-men' %}">Men</a>
+    <a href="{% url 'collection-women' %}">Women</a>
+    <a href="{% url 'collection-unisex' %}">Unisex</a>
+    <h3>More filtering</h3>
+    <a href="{% url 'sortby-price-low'  'KL' %}">Price (lowest-highest)</a><br> <!-- Need to make dynamic parameter in URL -->
+    <a href="{% url 'sortby-price-high' 'UL' %}">Price (highest-lowest)</a><br>
+    <a href="{% url 'collection-women' %}">Promo Price (lowest-highest</a><br>
+    <a href="{% url 'collection-unisex' %}">Promo Price (highest-lowest)</a>
+    <div style="border-bottom: 5px solid darkblue"></div>
+    <div>
+        {% for item in ade_collection %}
+            <p>ID: {{item.eyewear_id}}</p>
+            <p>
+                <a href="{% url 'collection-detail' item.eyewear_id %}">{{ item.name }}</a>
+            </p>
+            <p>DESCRIPTION: {{ item.description }}</p>
+            <p>LINE: {{ item.line }}</p>
+            <div>
+                <img src="{% static "backend_playground/img/" %}{{ item.image }}" width=500 height=400>
+            </div>
+            <p>PRICE: {{ item.price }}</p>
+            <p>GENDER: {{ item.gender }}</p>
+            <p>PROMO PRICE: {{ item.promotional_price }}</p>
+            <p>{{ item.arm_length }}</p>
+            <p>{{ item.bridge_length }}</p>
+            <p>{{ item.lens_height }}</p>            
+            <p>{{ item.lens_width }}</p>
+            <div style="border-top: 5px solid green"></div>            
+        {% endfor %}
+    </div>
+</body>
+
+</html>
