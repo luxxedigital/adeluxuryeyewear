@@ -27,6 +27,11 @@ class Product(models.Model):
     gender = models.CharField(max_length=1, choices=gender_options, default='M')
     promotional_price = models.FloatField()
 
+    # This gives the name of the object (the eyewear)
+    def __str__(self):
+        return self.name
+    
+
 class Instances(models.Model):
     """This model is to store the physical amount 
     there is for each product in the shop."""
