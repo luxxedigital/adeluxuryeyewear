@@ -15,11 +15,15 @@
     <a href="{% url 'collection-women' %}">Women</a>
     <a href="{% url 'collection-unisex' %}">Unisex</a>
     <h3>More filtering</h3>
-    <!-- Should remove the partially hardcoded URLS here and use the url var in Django. This works for now. -->
     <a href="/bendplay/collection/{{ collection }}/priority__low-price">Price (lowest-highest)</a><br> <!-- Need to make dynamic parameter in URL -->
     <a href="/bendplay/collection/{{ collection }}/priority__high-price">Price (highest-lowest)</a><br>
     <a href="/bendplay/collection/{{ collection }}/priority__low-promo-price">Promo Price (lowest-highest)</a><br>
     <a href="/bendplay/collection/{{ collection }}/priority__high-promo-price">Promo Price (highest-lowest)</a><br>    
+    <!--
+    <a href="{% url 'sortby_price-high' collection %}">Price (highest-lowest)</a><br>
+    <a href="{% url 'sortby_promoprice-low' collection %}">Promo Price (lowest-highest)</a><br>
+    <a href="{% url 'sortby_promoprice-high' collection %}">Promo Price (highest-lowest)</a>
+    -->
     <div style="border-bottom: 5px solid darkblue"></div>
     <div>
         {% for item in ade_collection %}

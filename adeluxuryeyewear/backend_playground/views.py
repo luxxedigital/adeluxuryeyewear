@@ -11,7 +11,8 @@ def view_all(request):
     collection_all = Product.objects.all()
 
     return render(request, 'backend_playground/collection_list.html', context={
-        'ade_collection': collection_all
+        'ade_collection': collection_all,
+        'collection': 'all'
     })
 
 def view_men(request):
@@ -19,7 +20,8 @@ def view_men(request):
     collection_men = Product.objects.filter(line='KL')
 
     return render(request, 'backend_playground/collection_list.html', context={
-        'ade_collection': collection_men
+        'ade_collection': collection_men,
+        'collection': 'KL'
     })
 
 def view_women(request):
@@ -27,7 +29,8 @@ def view_women(request):
     collection_women = Product.objects.filter(line='QL')
 
     return render(request, 'backend_playground/collection_list.html', context={
-        'ade_collection': collection_women
+        'ade_collection': collection_women,
+        'collection': 'QL'
     })
 
 def view_unisex(request):
@@ -35,7 +38,8 @@ def view_unisex(request):
     collection_unisex = Product.objects.filter(line='UL')
 
     return render(request, 'backend_playground/collection_list.html', context={
-        'ade_collection': collection_unisex
+        'ade_collection': collection_unisex,
+        'collection': 'UL'
     })
 
 #################
@@ -43,23 +47,64 @@ def view_unisex(request):
 #################
 
 def sort_by_price__low(request, line):
-    collection_by_price = Product.objects.filter(line=line).order_by('price')
+    """ Sorts a collection by price(low-high). The line is either 'all', 'KL', 'QL', or 'UL'.
+        Return the objects in that collection sorted by that criteria.
+    """
+
+    if line != 'KL' and line != 'QL' and line != 'UL':
+        collection_by_price = Product.objects.all().order_by('price')
+        line = 'all'
+    else:
+        collection_by_price = Product.objects.filter(line=line).order_by('price')
 
     return render(request, 'backend_playground/collection_list.html', context={
         'ade_collection': collection_by_price,
+        'collection': line
     })
 
 def sort_by_price__high(request, line):
-    collection_by_price = Product.objects.filter(line=line).order_by('-price')
+
+    if line != 'KL' and line != 'QL' and line != 'UL':
+        collection_by_price = Product.objects.all().order_by('-price')
+        line = 'all'
+    else:
+        collection_by_price = Product.objects.filter(line=line).order_by('-price')
 
     return render(request, 'backend_playground/collection_list.html', context={
         'ade_collection': collection_by_price,
+        'collection': line
     })
 
-def sort_by_promo_price(request):
+def sort_by_promo_price__low(request, line):
+
+    if line != 'KL' and line != 'QL' and line != 'UL':
+        collection_by_promo_price = Product.objects.all().order_by('promotional_price')
+        line = 'all'
+    else:
+        collection_by_promo_price = Product.objects.filter(line=line).order_by('promotional_price')
+
+    return render(request, 'backend_playground/collection_list.html', context={
+        'ade_collection': collection_by_promo_price,
+        'collection': line
+    })
+
+def sort_by_promo_price__high(request, line):
+
+    if line != 'KL' and line != 'QL' and line != 'UL':
+        collection_by_promo_price = Product.objects.all().order_by('-promotional_price')
+        line = 'all'
+    else:
+        collection_by_promo_price = Product.objects.filter(line=line).order_by('-promotional_price')
+
+    return render(request, 'backend_playground/collection_list.html', context={
+        'ade_collection': collection_by_promo_price,
+        'collection': line
+    })
+
+def sort_by_name__ascending(request):
     pass
 
-def sort_by_alphabetical(request):
+def sort_by_name__descending(request):
     pass
 
 #################
