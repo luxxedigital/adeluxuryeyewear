@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body style="background-color: lightgrey">
+    <h1>{% for item in ade_collection_item %}{{ item.name }}{% endfor %}</h1>
+    <h3>Filter by</h3>
+    <a href="{% url 'collection-all' %}">All</a>
+    <a href="{% url 'collection-men' %}">Men</a>
+    <a href="{% url 'collection-women' %}">Women</a>
+    <a href="{% url 'collection-unisex' %}">Unisex</a>
+    <div>
+        {% for item in ade_collection_item %}
+        <p>{{ item.eyewear_id }}</p>
+        <p>{{ item.name }}</p>
+        <p>{{ item.description }}</p>
+        <p>{{ item.line }}</p>
+        <div>
+            <img src="{% static "backend_playground/img/" %}{{ item.image }}" width=500 height=400>
+        </div>
+        <p>{{ item.price }}</p>
+        <p>{{ item.gender }}</p>
+        <p>{{ item.promotional_price }}</p>
+        <p>{{ item.arm_length }}</p>
+        <p>{{ item.bridge_length }}</p>
+        <p>{{ item.lens_height }}</p>
+        <p>{{ item.lens_width }}</p>
+        <div style="border-top: 5px solid black"></div>            
+        {% endfor %}
+    </div>
+</body>
+
+</html>
