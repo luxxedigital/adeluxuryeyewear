@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">   
+        <link rel="stylesheet" href="{% static 'css/products_style.css' %}">
+    </head>
+
+    <body>             
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <a class="item"> Home </a>
+            <div class="item">
+                <div class="header">Collections</div>
+                <div class="menu">
+                    <a class="item"> Kings Line </a>
+                    <a class="item"> Queens Line </a>
+                    <a class="item"> Unisex Line </a>
+                </div>
+            </div>
+            
+            <a href="{% url 'about' %}" class="item"> About </a>
+            <a class="item"> Contact </a>
+            <a class="item"> Terms & Conditions </a>
+            <a class="item"> Refund Policy </a>
+            <a class="item"> Privacy Statement </a>
+        </div>
+
+    
+
+        <!-- End Navigation -->
+
+        {% block content %}
+        
+        {% endblock %}
+
+
+        
+    
+        <!-- Toggles sidebar -->
+        <script>
+
+            $('#toggle').on('click', function(){
+                $('.ui.sidebar').sidebar('toggle');
+            });
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    </body>
+</html>

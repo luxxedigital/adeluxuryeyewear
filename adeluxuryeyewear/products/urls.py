@@ -8,4 +8,5 @@ urlpatterns = [
     path('kings-line/', views.kings_line),
     path('queens-line/', views.queens_line),
     path('unisex-line/', views.unisex_line),
+    path('', views.products, name='products')
 ]

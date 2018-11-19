@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def products(request):
-    return HttpResponse('products')
+    return render(request, 'products/products.html')
 
 def featured_line(request):
     return HttpResponse("kings-line")
