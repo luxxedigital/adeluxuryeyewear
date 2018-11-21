@@ -2,9 +2,12 @@
 {% load static %}
 
 
+<!--
+    TODO:   Make the sortby-price link have a dynamic parameter set to the page's eyewear line, i.e., Unisex.
+            Right now, it is hardcoded to the King's Line with KL.
+-->
 
-<!-- Body -->
-{% block content %}    
+{% block content %}
 
 <!-- Page Contents -->
 <div class="pusher">
@@ -19,30 +22,55 @@
     </div>
 
 
-    <div class="ui container item-detail" style="margin-bottom: 20%">
+    <div class="ui vertical center aligned basic segment">
+        Filter 
+        <select class="ui inline selection compact dropdown" onchange="filterBy(this.value)">
+            <option disabled selected>Pick an option</option>
+            <option value="{% url 'collection__all' %}">All</option>
+            <option value="{% url 'collection__men' %}">Men</option>
+            <option value="{% url 'collection__women' %}">Women</option>
+            <option value="{% url 'collection__unisex' %}">Unisex</option>
 
-        <div class="ui grid">
-            <div class="eight wide column">
-                <div class="item">
-                    <div class="ui big image">
-                        <img src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022">
-                    </div>
-                </div>
-            </div>
+        </select>
 
-            <div class="eight wide column top aligned">
-                <h1>THE BOSS</h1>
-            </div>
-        </div>
-       
+        Sort by  
+        <select class="ui inline selection compact dropdown" onchange="filterBy(this.value)">
+            <option disabled selected>Pick an option</option>
+            <option value="2">Alphabetically, A-Z</option>
+            <option value="/products/{{ collection }}/priority__low-price">Price: lowest first</option>
+            <option value="/products/{{ collection }}/priority__high-price">Price: highest first</option>
+        </select>
 
     </div>
 
-     <!-- FOOTER -->
-     <div class="ui inverted vertical footer segment black-bg footer-outter">
+   
+    <div class="ui container main-product-container">
+        <div class="ui middle aligned double stackable grid">
+            <div class="row">
+            {% for item in ade_collection %}
+                <div class="four wide column">
+                    <img class="ui medium centered  image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022">
+                    <div class="ui center aligned basic segment">
+                        <a href="{% url 'collection__detail' item.eyewear_id %}">{{ item.name }}</a>
+                        <p>$ {{ item.price }}</p>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+               
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="ui inverted vertical footer segment black-bg footer-outter">
         <div class="ui center aligned container">
             <div class="ui stackable inverted grid center middle aligned">
-
+    
                 <div class="four wide column">
                     <div class="ui large header">LET'S STAY CONNECTED</div>
                     <div class="ui small header">Subscribe to our newsletter!</div>
@@ -68,7 +96,7 @@
                     <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
                     <span class="sm-icon"><i class="fab fa-twitter"></i></span>
                 </div>
-
+    
             </div>
             
             <div class="ui inverted section divider"></div>
@@ -80,25 +108,8 @@
                 <a class="item" href="#">Privacy Statement</a>
             </div>
         </div>
-    </div><!-- End Footer-->
-
+    </div>
 
 </div>
+
 {% endblock %}
-
-
-
-
-
-
-
-
-      
-      
-
-
-
-     
-
-
-
