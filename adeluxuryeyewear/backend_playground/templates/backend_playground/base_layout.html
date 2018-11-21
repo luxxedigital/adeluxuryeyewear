@@ -2,91 +2,76 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Backend | Playground</title>
-        <!-- jQuery -->
+        <title>PLAYGROUND</title>
         <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-        <!-- Font Awesome (icons) -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <!-- Semantic UI -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    </head>
-    
-    <body class="index pushable">
         
-        <!-- Navigation -->
-        <div class="ui sidebar vertical left inverted menu">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">   
+        <link rel="stylesheet" href="{% static 'css/bendplay.css' %}">
+    </head>
+
+    <body>             
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
             <a href="{% url 'index' %}" class="item"> Home </a>
-            <a class="item"> All Collections </a>
-            <a class="item"> Shop Men </a>
-            <a class="item"> Shop Woman </a>
-            <a class="item"> Shop Unisex </a>
-            <a class="item"> About </a>
+            <div class="item">
+                <a href="{% url 'products' %}"><div class="header">Collections</div></a>
+                <div class="menu">
+                    <a class="item"> Kings Line </a>
+                    <a class="item"> Queens Line </a>
+                    <a class="item"> Unisex Line </a>
+                </div>
+            </div>
+            
+            <a href="{% url 'about' %}" class="item"> About </a>
             <a class="item"> Contact </a>
             <a class="item"> Terms & Conditions </a>
             <a class="item"> Refund Policy </a>
             <a class="item"> Privacy Statement </a>
         </div>
-        <div id="header" class="ui inverted icon top fixed menu">
-            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu </a>
-            <h1 class="center-text white">ADE LUXURY WEAR</h1>
-        </div>
-        <!-- End Navigation -->
-            
-        {% block content %}
-        {% endblock %}
-    <!--
-    <div id="footer" class="ui stackable grid">
-        <div class="row center aligned">
-            <div class="column">
-                <div class="ui large header">Let's stay connected!</div>
-                <div class="ui medium header">@adeluxury</div>
-                <span class="sm-icon"><i class="fab fa-instagram"></i></span>
-                <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
-                <span class="sm-icon"><i class="fab fa-twitter"></i></span>
-            </div>
-        </div>
-        <div class="row centered">
-            <div class="ui form newsletter-form">
-                <div class="field">
-                    <label>Subscribe to our newsletter!</label>
-                    <input type="text" placeholder="Email address">
-                </div>
-                <div class="field">
-                    <button class="ui right labeled icon button">
-                    <i class="right arrow icon"></i>
-                    Subscribe
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="boring" class="six column centered row center aligned">
-            <div class="column center aligned">
-                <a href="#">Refund Policy</a><br>          
-            </div>
-            <div class="column center aligned">
-                <a href="#">Terms and conditions</a><br>
-            </div>
-            <div class="column center aligned">
-                <a href="#">Privacy statement</a>
-        </div>
-        <div class="row right aligned">
-            <div class="column">
-                ADE Luxury Eyewear @ 2018
-            </div>
-        </div>
-    </div>
-    -->
 
+    
+
+        <!-- End Navigation -->
+
+        {% block content %}
+        
+        {% endblock %}
+
+        {% block footer %}
+
+        {% endblock %}
+
+
+        
+    
+        <!-- Toggles sidebar -->
         <script>
+
             $('#toggle').on('click', function(){
                 $('.ui.sidebar').sidebar('toggle');
             });
+
+            function filterBy(src){
+
+                window.location = src;
+            }
+            
+           
+            
+
+            
+
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!-- JavaScript -->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
     </body>
 </html>
