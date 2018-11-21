@@ -6,44 +6,48 @@
 <!-- Body -->
 {% block content %}    
 
-<div class="ui bottom attached ">
+<div class="pusher">
+
+    <div class="ui inverted vertical center aligned segment black-bg">
+
+        <div class="ui large secondary inverted menu">
+            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
+            <img class="ui centered image logo-img" src="{% static 'img/ade_1.png' %}" style="width: 300px; height: 200px;">
+        </div>
+        
+    </div>
+
+
+    <div class="ui container">
         <!-- Carousel -->
         <div class="container black-bg" >
-        <div class="main-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
-            <div class="carousel-cell">
-                <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ 4B36D4FE-3E54-4B73-AB1A-3B865CBED26B.JPEG' %}" alt="product image" style="height: 700px"/>
+            <div class="main-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+                <div class="carousel-cell">
+                    <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ 4B36D4FE-3E54-4B73-AB1A-3B865CBED26B.JPEG' %}" alt="product image" style="height: 700px"/>
+                </div>
+
+                <div class="carousel-cell">
+                    <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ B85680AF-D830-4D2B-9C6E-AE848CD99B79.JPEG' %}" alt="banner img" style="height: 700px" />
+                    <!-- <div class="carousel-content">
+                        <button class="ui huge inverted standard button">SHOP NOW</button>                
+                    </div>-->
+                </div>
+
+                <div class="carousel-cell">
+                    <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ A9FC860B-199D-43AB-9D61-B4BA040DD0C0.JPEG' %}"  alt="banner img" style="height: 700px" />
+                    
+                    <!--<div class="carousel-content">
+                        <h1>SEE LIKE ROYALTY, FEEL LIKE ROYALTY</h1>
+                        <button class="ui huge inverted standard button">SHOP NOW</button>
+                    </div>-->
+                </div>
                 
-               <!-- <div class="carousel-content">
-                    <h1>Experience the way it truly feels to look like royalty. </h1>
-                    <button class="ui huge inverted standard button" style="margin-right: auto; margin-left: auto">SHOP NOW</button>
-                </div>-->
             </div>
-
-            <div class="carousel-cell">
-                <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ B85680AF-D830-4D2B-9C6E-AE848CD99B79.JPEG' %}" alt="banner img" style="height: 700px" />
-
-               <!-- <div class="carousel-content">
-                    <button class="ui huge inverted standard button">SHOP NOW</button>                
-                </div>-->
-            </div>
-
-            <div class="carousel-cell">
-                <img src="{% static 'img/product_images/Luxxe _ ADE _Luxxe _ ADELuxxe _ A9FC860B-199D-43AB-9D61-B4BA040DD0C0.JPEG' %}"  alt="banner img" style="height: 700px" />
-                
-                <!--<div class="carousel-content">
-                    <h1>SEE LIKE ROYALTY, FEEL LIKE ROYALTY</h1>
-                    <button class="ui huge inverted standard button">SHOP NOW</button>
-                </div>-->
-            </div>
-            
         </div>
-    </div>
-        <!-- End carousel -->
-    
+        
         <div class="ui container">
             <div class="ui huge header">FEEL LIKE ROYALTY IN ANY OF OUR COLLECTIONS</div>
             <hr>
-            
         </div>
         
         <div class="ui container featured-products">
@@ -82,7 +86,8 @@
                 </div>
             </div>
         </div><!-- End collections grid row -->
-
+        
+        
         <div class="ui grid container black-bg" style="margin-bottom:50px">
             <div class="ten wide column">
                 <!--<img class="ui huge image padded-img" src="https://semantic-ui.com/images/wireframe/image.png">-->
@@ -91,37 +96,72 @@
             <div class="six wide column middle aligned">
                 <h3 class="white" style="margin-right: auto; margin-left: auto;">SHOP OUR AMAZING STYLES TODAY</h3>
                 <button class="ui huge inverted standard button">SHOP NOW</button>   
-                             
+                                
             </div>
+        </div>
+
+        <!-- SnapWidget -->
+        <div class="ui container center aligned">
+
         </div>
         
 
-        <!-- Footer -->
-        <div class="ui vertical inverted footer segment">
-            <div class="ui center aligned container">
-                <div class="ui stackable grid">
-                    <div class="eight wide column">
-                        <div class="ui celled horizontal list">
-                            <div class="item white"><a href="#"> About </a></div>
-                            <div class="item"><a href="#"> Contact </a></div>
-                            <div class="item"><a href="#"> Terms & Conditions </a></div>
-                            <div class="item"><a href="#"> Refund Policy </a></div>
-                            <div class="item"><a href="#"> Privacy Statement </a></div>
+        
 
-                        </div>
+    </div> <!-- End bottom attached segment -->
+
+     <!-- FOOTER -->
+     <div class="ui inverted vertical footer segment black-bg footer-outter">
+         <div class="ui center aligned container">
+             <div class="ui stackable inverted grid center middle aligned">
+    
+                <div class="four wide column">
+                    <div class="ui large header">LET'S STAY CONNECTED</div>
+                    <div class="ui small header">Subscribe to our newsletter!</div>
+                </div>
+                
+
+                <div class="six wide column">
+                    <div class="ui form newsletter-form field" style="margin-top:2.5em">
+                        <input type="text" placeholder="Email address">
                     </div>
                 </div>
+
+                <div class="two wide column">
+                    <button class="ui right labeled icon button" style="margin-top:2.5em">
+                        <i class="right chevron icon"></i>
+                        Subscribe
+                    </button>
+                </div>
+
+                <div class="four wide column">
+                    <div class="ui medium header">@adeluxury</div>
+                    <a href="http://www.instagram.com/adeluxuryeyewear"><span class="sm-icon"><i class="fab fa-instagram"></i></span></a>
+                    <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
+                    <span class="sm-icon"><i class="fab fa-twitter"></i></span>
+                </div>
+    
             </div>
-        </div> <!-- End Footer -->
-
-
-
+            
+            <div class="ui inverted section divider"></div>
+                <div class="ui horizontal inverted small divided link list">
+                <a class="item" href="#">About</a>
+                <a class="item" href="#">Contact</a>
+                <a class="item" href="#">Terms & Conditions</a>
+                <a class="item" href="#">Refund Policy</a>
+                <a class="item" href="#">Privacy Statement</a>
+            </div>
+        </div>
+    </div>
     
 
-</div> <!-- End bottom attached segment -->
 
-</div> <!-- pusher from base-layout -->
+</div>
+
 {% endblock %}
+
+
+
 
 
 
