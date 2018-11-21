@@ -5,6 +5,9 @@ from django.http import HttpResponse
 def products(request):
     return render(request, 'products/products.html')
 
+def detail(request):
+    return render(request, 'products/product_detail.html')
+
 def featured_line(request):
     return HttpResponse("kings-line")
 
