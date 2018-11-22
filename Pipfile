@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 django = "*"
 mysqlclient = "*"
+stripe = "*"
 
 [requires]
 python_version = "3.6"
