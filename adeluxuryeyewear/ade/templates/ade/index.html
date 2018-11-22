@@ -7,7 +7,7 @@
 {% block content %}    
 
 <div class="pusher">
-
+    
     <div class="ui inverted vertical center aligned segment black-bg">
 
         <div class="ui large secondary inverted menu">
@@ -55,7 +55,7 @@
                 <div class="four wide column">
                     <img class="ui medium centered  image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022">
                     <div class="ui center aligned basic segment">
-                        FEATURED COLLECTION<br><br>
+                        <a href="{% url 'collection__featured' %}">FEATURED COLLECTION</a><br><br>
                         $70.00
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="four wide column">
                     <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_MAN_MODERN_TIMES_BLACK_FRONT_1024x1024.jpg?v=1529339266">
                     <div class="ui center aligned basic segment">
-                        KINGS LINE<br><br>
+                        <a href="{% url 'collection__men' %}">KINGS LINE</a><br><br>
                         $75.00
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                 <div class="four wide column">
                     <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_SAHARA_MINI_MATTE_BLACK_PURPLE_FADE_FRONT_1024x1024.jpg?v=1538412662">
                     <div class="ui center aligned basic segment">
-                        QUEENS LINE<br><br>
+                        <a href="{% url 'collection__women' %}">QUEENS LINE</a><br><br>
                         $65.00
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="four wide column">
                     <img class="ui medium centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_MOD_STAR_GOLD_GREEN_FRONT_1024x1024.jpg?v=1539884570">
                     <div class="ui center aligned basic segment">
-                        UNISEX LINE<br><br>
+                        <a href="{% url 'collection__unisex' %}">UNISEX LINE</a><br><br>
                         $70.00
                     </div>
                 </div>
