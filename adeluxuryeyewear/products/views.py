@@ -15,6 +15,16 @@ def view_all(request):
         'collection': 'all'
     })
 
+def view_featured(request):
+    """Returns all the featured eyewear objects from the Product model"""
+    collection_featured = Product.objects.filter(featured__exact=True)
+
+    return render(request, 'products/collection_list.html', context={
+        'ade_collection': collection_featured,
+        'collection': 'featured'
+    })
+
+
 def view_men(request):
     """Returns all the men(King's line) eyewear objects from Product model"""
     collection_men = Product.objects.filter(line='KL')
@@ -53,9 +63,14 @@ def sort_by_price__low(request, line):
 
     if line != 'KL' and line != 'QL' and line != 'UL':
         collection_by_price = Product.objects.all().order_by('price')
-        line = 'all'
     else:
-        collection_by_price = Product.objects.filter(line=line).order_by('price')
+        # TODO: Fix passing the line variable for all collections as a parameter.
+        if line == 'all':
+            collection_by_price = Product.objects.filter(line=line).order_by('price')
+            line = 'all'
+        else:
+            collection_by_price = Product.objects.filter(featured__exact=True).order_by('price')
+            line = 'featured'
 
     return render(request, 'products/collection_list.html', context={
         'ade_collection': collection_by_price,

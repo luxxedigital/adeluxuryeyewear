@@ -10,6 +10,7 @@ urlpatterns = [
 # Filter-by collection
 urlpatterns += [
     path('all/', views.view_all, name='collection__all'),
+    path('featured/', views.view_featured, name='collection__featured'),
     path('KL/', views.view_men, name='collection__men'),
     path('QL/', views.view_women, name='collection__women'),
     path('UL/', views.view_unisex, name='collection__unisex'),
