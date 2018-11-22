@@ -27,10 +27,11 @@
 
 
     <div class="ui vertical center aligned basic segment">
-        Filter 
+        Filter
         <select class="ui inline selection compact dropdown" onchange="filterBy(this.value)">
             <option disabled selected>Pick an option</option>
             <option value="{% url 'collection__all' %}">All</option>
+            <option value="{% url 'collection__featured' %}">Featured</option>
             <option value="{% url 'collection__men' %}">Men</option>
             <option value="{% url 'collection__women' %}">Women</option>
             <option value="{% url 'collection__unisex' %}">Unisex</option>
@@ -46,8 +47,16 @@
         </select>
 
     </div>
+    <div class="ui vertical center aligned basic segment">
+        <h1>
+            {% if collection == "all" %}ADE collection{% endif %}            
+            {% if collection == "featured" %}Featured collection{% endif %}            
+            {% if collection == "KL" %}King's Line{% endif %}
+            {% if collection == "QL" %}Queens's Line{% endif %}
+            {% if collection == "UL" %}Unisex's Line{% endif %}
+        </h1>
+    </div> 
 
-   
     <div class="ui container main-product-container">
         <div class="ui middle aligned double stackable grid">
             <div class="row">
