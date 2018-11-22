@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PLAYGROUND</title>
+        <title>PRODUCTS</title>
         <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">   
-        <link rel="stylesheet" href="{% static 'css/bendplay.css' %}">
+        <link rel="stylesheet" href="{% static 'css/products_style.css' %}">
     </head>
 
     <body>             
@@ -22,9 +22,9 @@
             <div class="item">
                 <a href="{% url 'products' %}"><div class="header">Collections</div></a>
                 <div class="menu">
-                    <a class="item"> Kings Line </a>
-                    <a class="item"> Queens Line </a>
-                    <a class="item"> Unisex Line </a>
+                    <a href="{% url 'collection__men' %}" class="item"> Kings Line </a>
+                    <a href="{% url 'collection__women' %}" class="item"> Queens Line </a>
+                    <a href="{% url 'collection__unisex' %}" class="item"> Unisex Line </a>
                 </div>
             </div>
             
@@ -61,6 +61,36 @@
 
                 window.location = src;
             }
+
+            $(document).ready(function(){
+                
+                /* CHANGING BREADCRUMB NAMES */
+                gender = $('#gender-breadcrumb').text();
+                
+                if(gender == 'F'){
+                    $('#gender-breadcrumb').text("QUEEN'S LINE");
+                    $('#gender-breadcrumb').attr('href',"{% url 'collection__men' %}");
+                }
+                else if (gender == 'M'){
+                    $('#gender-breadcrumb').text("KINGS'S LINE");
+                    $('#gender-breadcrumb').attr('href',"{% url 'collection__women' %}");
+                }
+                else if (gender == 'U'){
+                    $('#gender-breadcrumb').text("UNISEX LINE");
+                    $('#gender-breadcrumb').attr('href',"{% url 'collection__unisex' %}");
+                }
+
+
+                
+            })
+            
+            $('.thumbnail').find('.image').on('click', function(){
+                    console.log("clicked")
+                    src = $(this).attr('src')
+                    $('#main-img').attr('src', src )
+                })
+
+            
             
            
             
