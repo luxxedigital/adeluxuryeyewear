@@ -1,4 +1,4 @@
-{% extends 'about/base_layout.html' %}
+{% extends 'ade/base_layout.html' %}
 {% load static %}
 
 {% block title %}
@@ -7,108 +7,54 @@ About us | ADE
 
 {% block content %}
 
-<div class="pusher">
 
-    <div class="ui inverted vertical center aligned segment black-bg">
 
-        <div class="ui large secondary inverted menu">
-            <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
-            <a class="ui centered image logo-img" href="{% url 'index' %}"><img  src="{% static 'img/ade_1.png' %}" style="width: 300px; height: 200px;"></a>
+<div class="ui container main-container">
+
+    <div class="ui column centered stackable grid">
+        <div class="row">
+            <div class="column">
+                <div class="ui huge header">What is ADE?</div>
+            </div>
         </div>
 
+        <div class="two column row">
+            <div class="four column">
+                <p>
+                    ADE in the Yoruba culture means “to crown”. The prefix name ADE is usually given to a child during birth as a designation of royalty or coming from royal descendants. Dr. Fadeyi, having a great grandfather who was a King in the town of Awe in Lagos, Nigeria fortunately was blessed with the opportunity to bear the ADE name.
+                </p>
+                <p>
+                    Dr. Fadeyi has an extensive training in advanced optics, frame design and lens materials. He is committed to providing the highest quality products in the industry for his customers.
+                </p>
+                <p>
+                    With his strong fashion forward sense, these culture-inspired sunglasses are meant to be the perfect accessory to your perfect outfit. No matter the season, allow yourself to experience the way it truly feels to look like royalty. 
+                    “Loyalty, Got ROYALTY inside your DNA...”  -Kendrick Lamar
+                </p>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="ui huge header">Meet Dr. Adesola “Sola” Fadeyi, O.D.</div>
+            </div>
+        </div>
     </div>
-
-    <div class="ui container main-container">
-
-        <div class="ui column centered stackable grid">
-            <div class="row">
-                <div class="column">
-                    <div class="ui huge header">What is ADE?</div>
-                </div>
+    <div class="ui stackable two column grid">
+        <div class="row">
+            <div class="eight wide column">
+                <img class="ui fluid image" src="{% static 'img/dr_adesola_fadeyi.jpg' %}">
             </div>
-
-            <div class="two column row">
-                <div class="four column">
-                    <p>
-                        ADE in the Yoruba culture means “to crown”. The prefix name ADE is usually given to a child during birth as a designation of royalty or coming from royal descendants. Dr. Fadeyi, having a great grandfather who was a King in the town of Awe in Lagos, Nigeria fortunately was blessed with the opportunity to bear the ADE name.
-                    </p>
-                    <p>
-                        Dr. Fadeyi has an extensive training in advanced optics, frame design and lens materials. He is committed to providing the highest quality products in the industry for his customers.
-                    </p>
-                    <p>
-                        With his strong fashion forward sense, these culture-inspired sunglasses are meant to be the perfect accessory to your perfect outfit. No matter the season, allow yourself to experience the way it truly feels to look like royalty. 
-                        “Loyalty, Got ROYALTY inside your DNA...”  -Kendrick Lamar
-                    </p>
-                </div>
-                <div class="column">
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="ui huge header">Meet Dr. Adesola “Sola” Fadeyi, O.D.</div>
-                </div>
-            </div>
-        </div>
-        <div class="ui stackable two column grid">
-            <div class="row">
-                <div class="eight wide column">
-                    <img class="ui fluid image" src="{% static 'img/dr_adesola_fadeyi.jpg' %}">
-                </div>
-                <div class="eight wide column">
-                    <div class="ui segment">
-                        <p>29, Nigerian-Yoruba born, Texan native. During his studies at The Nova Southeastern College of Optometry, Dr. Fadeyi always displayed a high level of passion and a keen eye for frame design, frame styling, and luxury fashion.</p>
-                        <p>Practicing amongst some of the country's most educated individuals, Dr. Fadeyi's sense of style and charisma was never far. He was named "Best Dressed" in his college by his peers and his faculty. Dr. Fadeyi is always privy to details and looking his best. Let Dr. Fadeyi help you add the most important fashion accessory to your perfect outfit. His motto is “everyone deserves to feel and look like royalty.”</p>
-                        <p>Dr. Fadeyi currently is working out of five offices in the Rio Grand Valley area in Texas. He his happily married to his beautiful wife Dr. Brenda Fadeyi, O.D., who also is an Optometrist.</p>
-                    </div>
+            <div class="eight wide column">
+                <div class="ui segment">
+                    <p>29, Nigerian-Yoruba born, Texan native. During his studies at The Nova Southeastern College of Optometry, Dr. Fadeyi always displayed a high level of passion and a keen eye for frame design, frame styling, and luxury fashion.</p>
+                    <p>Practicing amongst some of the country's most educated individuals, Dr. Fadeyi's sense of style and charisma was never far. He was named "Best Dressed" in his college by his peers and his faculty. Dr. Fadeyi is always privy to details and looking his best. Let Dr. Fadeyi help you add the most important fashion accessory to your perfect outfit. His motto is “everyone deserves to feel and look like royalty.”</p>
+                    <p>Dr. Fadeyi currently is working out of five offices in the Rio Grand Valley area in Texas. He his happily married to his beautiful wife Dr. Brenda Fadeyi, O.D., who also is an Optometrist.</p>
                 </div>
             </div>
         </div>
     </div>
-
-     <!-- FOOTER -->
-     <div class="ui inverted vertical footer segment black-bg footer-outter">
-         <div class="ui center aligned container">
-            <div class="ui stackable inverted grid center middle aligned">
-    
-                <div class="four wide column">
-                    <div class="ui large header">LET'S STAY CONNECTED</div>
-                    <div class="ui small header">Subscribe to our newsletter!</div>
-                </div>
-                
-
-                <div class="six wide column">
-                    <div class="ui form newsletter-form field" style="margin-top:2.5em">
-                        <input type="text" placeholder="Email address">
-                    </div>
-                </div>
-
-                <div class="two wide column">
-                    <button class="ui right labeled icon button" style="margin-top:2.5em">
-                        <i class="right chevron icon"></i>
-                        Subscribe
-                    </button>
-                </div>
-
-                <div class="four wide column">
-                    <div class="ui medium header">@adeluxury</div>
-                    <a href="http://www.instagram.com/adeluxuryeyewear"><span class="sm-icon"><i class="fab fa-instagram"></i></span></a>
-                    <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
-                    <span class="sm-icon"><i class="fab fa-twitter"></i></span>
-                </div>
-    
-            </div>
-               
-            <div class="ui inverted section divider"></div>
-                <div class="ui horizontal inverted small divided link list">
-                <a class="item" href="#">About</a>
-                <a class="item" href="#">Contact</a>
-                <a class="item" href="#">Terms & Conditions</a>
-                <a class="item" href="#">Refund Policy</a>
-                <a class="item" href="#">Privacy Statement</a>
-            </div>
-        </div>
-    </div><!-- End Footer-->
-
 </div>
+
 {% endblock %}
 

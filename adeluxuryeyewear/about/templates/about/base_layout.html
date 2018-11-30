@@ -39,17 +39,70 @@
 
         <!-- End Navigation -->
 
-        {% block content %}
+        <div class="pusher">
+            
+            <div class="ui inverted vertical center aligned segment black-bg">
+                
+                <div class="ui large secondary inverted menu">
+                    <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
+                    <a class="ui centered image logo-img" href="{% url 'index' %}"><img  src="{% static 'img/ade_1.png' %}" style="width: 300px; height: 200px;"></a>
+                </div>
         
-        {% endblock %}
-
-        {% block footer %}
-
-        {% endblock %}
-
-
+            </div>
         
-    
+        
+            <!-- ACTUAL PAGE CONTENT -->
+            {% block content %}
+        
+            {% endblock %}
+            
+            <div class="ui inverted vertical footer segment black-bg footer-outter">
+                <div class="ui center aligned container">
+                    <div class="ui stackable inverted grid center middle aligned">
+                        
+                        <div class="four wide column">
+                            <div class="ui large header">LET'S STAY CONNECTED</div>
+                            <div class="ui small header">Subscribe to our newsletter!</div>
+                        </div>
+                        
+                        <div class="six wide column">
+                            <div class="ui form newsletter-form field" style="margin-top:2.5em">
+                                <input type="text" placeholder="Email address">
+                            </div>
+                        </div>
+                        
+                        <div class="two wide column">
+                            <button class="ui right labeled icon button" style="margin-top:2.5em">
+                                <i class="right chevron icon"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                        
+                        <div class="four wide column">
+                            <div class="ui medium header">@adeluxury</div>
+                            <a href="http://www.instagram.com/adeluxuryeyewear"><span class="sm-icon"><i class="fab fa-instagram"></i></span></a>
+                            <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
+                            <span class="sm-icon"><i class="fab fa-twitter"></i></span>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ui inverted section divider"></div>
+                    
+                    <div class="ui horizontal inverted small divided link list">
+                        <a class="item" href="{% url 'about' %}">About</a>
+                        <a class="item" href="#">Contact</a>
+                        <a class="item" href="#">Terms & Conditions</a>
+                        <a class="item" href="#">Refund Policy</a>
+                        <a class="item" href="#">Privacy Statement</a>
+                    </div>
+                
+                </div>
+            </div> <!--End Footer-->
+        
+        </div>
+        
+
         <!-- Toggles sidebar -->
         <script>
 

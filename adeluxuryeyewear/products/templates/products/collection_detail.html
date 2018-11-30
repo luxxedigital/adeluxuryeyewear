@@ -1,4 +1,4 @@
-{% extends 'products/base_layout.html' %}
+{% extends 'ade/base_layout.html' %}
 {% load static %}
 
 
@@ -10,146 +10,112 @@
 {% block content %}
 
 <!-- Page Contents -->
-<div class="pusher">
-    <div class="full height">
 
-        <div class="ui inverted vertical center aligned segment black-bg">
+<div class="full height">
 
-            <div class="ui large secondary inverted menu">
-                <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
-                <a class="ui centered image logo-img" href="{% url 'index' %}"><img  class="logo-size" src="{% static 'img/ade_1.png' %}"></a>
+    <div class="ui container detail-product-container">
+
+        <div class="ui breadcrumb">
+            <a href="{% url 'index' %}" class="section">HOME</a>
+            <i class="right angle icon divider"></i>
+            <a  href="" id="gender-breadcrumb" class="section">{% for item in ade_collection_item %}{{ item.gender }}{% endfor %}</a>
+            <i class="right angle icon divider"></i>
+            <div class="active section uppercase">{% for item in ade_collection_item %}{{ item.name }}{% endfor %}</div>
+        </div>
+
+        <div>
+            {% for item in ade_collection_item %}
+            <div>
+                <div class="flexslider">
+                    <ul class="slides">
+                    <li data-thumb="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Front_1024x1024.jpg?v=1541540420">
+                        <img src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Front_1024x1024.jpg?v=1541540420">
+                    </li>
+                    <li data-thumb="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Side_1024x1024.jpg?v=1541540420">
+                        <img src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Side_1024x1024.jpg?v=1541540420">
+                    </li>
+                    <li data-thumb="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_BLACK_SMOKE_FRONT_1024x1024.jpg?v=1541540420">
+                        <img src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_BLACK_SMOKE_FRONT_1024x1024.jpg?v=1541540420">
+                    </li>
+                    <li data-thumb="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCH_KISS_BLACK_SMOKE_SIDE_1024x1024.jpg?v=1541540420">
+                        <img src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCH_KISS_BLACK_SMOKE_SIDE_1024x1024.jpg?v=1541540420">
+                    </li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+                    <h2 class="ui left floated uppercase">{{ item.name }}</h2>
+                    <div class="ui clearing divider"></div>
+                    <p></p>
+                </div>
+
+
+
+               <!-- <div class="ui center aligned container">
+                    <div class="ui small images thumbnail">
+                        <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Front_1024x1024.jpg?v=1541540420"></a>
+                        <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Side_1024x1024.jpg?v=1541540420"></a>
+                        <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_BLACK_SMOKE_FRONT_1024x1024.jpg?v=1541540420"></a>
+                        <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCH_KISS_BLACK_SMOKE_SIDE_1024x1024.jpg?v=1541540420"></a>
+                        <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_CLEAR_ROSE_FRONT_1024x1024.jpg?v=1541540420"></a>
+                    </div>
+                </div>  -->
+
+
+                
             </div>
             
-        </div>
-   
-        <div class="ui container detail-product-container">
+            
+            <h4 class="ui horizontal divider header"></h4>
 
-            <div class="ui breadcrumb">
-                <a href="{% url 'index' %}" class="section">HOME</a>
-                <i class="right angle icon divider"></i>
-                <a  href="" id="gender-breadcrumb" class="section">{% for item in ade_collection_item %}{{ item.gender }}{% endfor %}</a>
-                <i class="right angle icon divider"></i>
-                <div class="active section uppercase">{% for item in ade_collection_item %}{{ item.name }}{% endfor %}</div>
+            <div class="ui stackable two column grid">
+                <div class="four wide column">
+                    <ul>
+                        <li>100% UV400 Protection</li>
+                        <li>Optical Quality Hinges</li>
+                        <li>Metal Frame & Stainless Steel Bridge</li>
+                        <li>Polycarbonate Lenses</li>
+                    </ul> 
+                </div>
+
+                <div class="twelve wide column">
+                    <table class="ui definition table" style="float: right">
+                        <tbody>
+                            <tr>
+                                <td class="two wide column">Arm Length</td>
+                                <td>{{ item.arm_length }}</td>
+                            </tr>
+                            <tr>
+                                <td class="three wide column">Bridge Length</td>
+                                <td>{{ item.bridge_length }}</td>
+                            </tr>
+                            <tr>
+                                <td class="two wide column">Lens Height</td>
+                                <td>{{ item.lens_height }}</td>
+                            </tr>
+                            <tr>
+                                <td class="two wide column">Lens Width</td>
+                                <td>{{ item.lens_width }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
-
-            <div>
-                {% for item in ade_collection_item %}
-                <!--<p>{{ item.name }}</p>
-                <p>{{ item.description }}</p>
-                <p>{{ item.line }}</p>-->
-                <div>
-                    <img id="main-img" class="ui huge centered image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Front_1024x1024.jpg?v=1541540420">
-                    <!--<img src="{% static "products/img/" %}{{ item.image }}" width=500 height=400>-->
-                    
-
-                    <div>
-                        <h2 class="ui left floated uppercase">{{ item.name }}</h2>
-                        <div class="ui clearing divider"></div>
-                        <p></p>
-                    </div>
-
-
-
-                    <div class="ui center aligned container">
-                        <div class="ui small images thumbnail">
-                            <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Front_1024x1024.jpg?v=1541540420"></a>
-                            <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_Nordstrom_FrenchKiss_TortGold_Side_1024x1024.jpg?v=1541540420"></a>
-                            <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_BLACK_SMOKE_FRONT_1024x1024.jpg?v=1541540420"></a>
-                            <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCH_KISS_BLACK_SMOKE_SIDE_1024x1024.jpg?v=1541540420"></a>
-                            <a href="#"><img class="ui image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/QUAY_FRENCHKISS_CLEAR_ROSE_FRONT_1024x1024.jpg?v=1541540420"></a>
-                        </div>
-                    </div>  
-                    
-                </div>
+           
+                        
+            <button class="ui huge black standard right floated black button" style="margin-bottom: 50px">${{ item.price }} | ADD TO CART</button>    
                 
-                
-                <h4 class="ui horizontal divider header"></h4>
-                <table class="ui definition table">
-                    <tbody>
-                        <tr>
-                        <td class="two wide column">Arm Length</td>
-                        <td>{{ item.arm_length }}</td>
-                        </tr>
-                        <tr>
-                        <td>Bridge Length</td>
-                        <td>{{ item.bridge_length }}</td>
-                        </tr>
-                        <tr>
-                        <td>Lens Height</td>
-                        <td>{{ item.lens_height }}</td>
-                        </tr>
-                        <tr>
-                        <td>Lens Width</td>
-                        <td>{{ item.lens_width }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                
-                
-                
-                <button class="ui huge black standard right floated black button" style="margin-bottom: 50px">${{ item.price }} | ADD TO CART</button>    
-                   
-                
-               
-              
-                {% endfor %}
-                    </div>
-
-
-    
-       
-
+            {% endfor %}
         </div>
 
-
-
-    <!-- FOOTER -->
-        <div class="ui inverted vertical footer segment black-bg footer-outter">
-            <div class="ui center aligned container">
-                <div class="ui stackable inverted grid center middle aligned">
-        
-                    <div class="four wide column">
-                        <div class="ui large header">LET'S STAY CONNECTED</div>
-                        <!--<div class="ui small header">Subscribe to our newsletter!</div>-->
-                    </div>
-                    <div class="ui form eight wide subscribe column">
-
-                        <div class="field">
-                        
-                            <p class="ui centered lead large">Subscribe to our newsletter!</p>
-                        <div class="ui fluid action input">
-                        <input placeholder="Email" type="text">
-                        <div class="ui button">Susbcribe</div>
-                        </div>
-                        </div>
-                        
-                        </div>
-                    
-
-                    <div class="four wide column">
-                        <div class="ui medium header">@adeluxury</div>
-                        <a href="http://www.instagram.com/adeluxuryeyewear"><span class="sm-icon"><i class="fab fa-instagram"></i></span></a>
-                        <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
-                        <span class="sm-icon"><i class="fab fa-twitter"></i></span>
-                    </div>
-        
-                </div>
-                
-                <div class="ui inverted section divider"></div>
-                    <div class="ui horizontal inverted small divided link list">
-                    <a class="item" href="#">About</a>
-                    <a class="item" href="#">Contact</a>
-                    <a class="item" href="#">Terms & Conditions</a>
-                    <a class="item" href="#">Refund Policy</a>
-                    <a class="item" href="#">Privacy Statement</a>
-                </div>
-            </div>
-        </div>
-    
-    
     </div>
+
+
 </div>
+
 
 {% endblock %}
 

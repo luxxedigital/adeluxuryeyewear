@@ -26,6 +26,10 @@ urlpatterns += [
 ]
 
 urlpatterns += [
+    path('terms/', include('terms.urls'), name='terms')
+]
+
+urlpatterns += [
     path('users/', include('users.urls'))
 ]
 

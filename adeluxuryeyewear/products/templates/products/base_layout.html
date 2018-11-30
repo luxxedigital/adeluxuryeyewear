@@ -2,11 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<<<<<<< HEAD
         <title>PRODUCTS</title>
-=======
-        <title>Collections | ADE</title>
->>>>>>> 9851d2981e7d62c53f4643fe6fbafbae2f3c2b19
         <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -15,12 +11,15 @@
         <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Pacifico" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">   
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.css">
+        
+  
         <link rel="stylesheet" href="{% static 'css/products_style.css' %}">
     </head>
 
-    <body>             
-        <!-- Sidebar Menu -->
+<body>
+    
         <div class="ui vertical inverted sidebar menu">
             <a href="{% url 'index' %}" class="item"> Home </a>
             <div class="item">
@@ -38,18 +37,70 @@
             <a class="item"> Refund Policy </a>
             <a class="item"> Privacy Statement </a>
         </div>
-
     
 
-        <!-- End Navigation -->
-
-        {% block content %}
+        <div class="pusher">
+            
+            <div class="ui inverted vertical center aligned segment black-bg">
+                
+                <div class="ui large secondary inverted menu">
+                    <a id="toggle" class="item"><i id="sidebar-icon" class="sidebar icon"></i> Menu</a>
+                    <a class="ui centered image logo-img" href="{% url 'index' %}"><img  src="{% static 'img/ade_1.png' %}" style="width: 300px; height: 200px;"></a>
+                </div>
         
-        {% endblock %}
-
-        {% block footer %}
-
-        {% endblock %}
+            </div>
+        
+        
+            <!-- ACTUAL PAGE CONTENT -->
+            {% block content %}
+        
+            {% endblock %}
+            
+            <div class="ui inverted vertical footer segment black-bg footer-outter">
+                <div class="ui center aligned container">
+                    <div class="ui stackable inverted grid center middle aligned">
+                        
+                        <div class="four wide column">
+                            <div class="ui large header">LET'S STAY CONNECTED</div>
+                            <div class="ui small header">Subscribe to our newsletter!</div>
+                        </div>
+                        
+                        <div class="six wide column">
+                            <div class="ui form newsletter-form field" style="margin-top:2.5em">
+                                <input type="text" placeholder="Email address">
+                            </div>
+                        </div>
+                        
+                        <div class="two wide column">
+                            <button class="ui right labeled icon button" style="margin-top:2.5em">
+                                <i class="right chevron icon"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                        
+                        <div class="four wide column">
+                            <div class="ui medium header">@adeluxury</div>
+                            <a href="http://www.instagram.com/adeluxuryeyewear"><span class="sm-icon"><i class="fab fa-instagram"></i></span></a>
+                            <span class="sm-icon"><i class="fab fa-facebook-f"></i></span>
+                            <span class="sm-icon"><i class="fab fa-twitter"></i></span>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ui inverted section divider"></div>
+                    
+                    <div class="ui horizontal inverted small divided link list">
+                        <a class="item" href="{% url 'about' %}">About</a>
+                        <a class="item" href="#">Contact</a>
+                        <a class="item" href="#">Terms & Conditions</a>
+                        <a class="item" href="#">Refund Policy</a>
+                        <a class="item" href="#">Privacy Statement</a>
+                    </div>
+                
+                </div>
+            </div> <!--End Footer-->
+        
+        </div>
 
 
         
@@ -84,17 +135,13 @@
                     $('#gender-breadcrumb').attr('href',"{% url 'collection__unisex' %}");
                 }
 
-
-                
             })
             
             $('.thumbnail').find('.image').on('click', function(){
-                    console.log("clicked")
+                    //console.log("clicked")
                     src = $(this).attr('src')
                     $('#main-img').attr('src', src )
                 })
-
-            
             
            
             
@@ -106,6 +153,8 @@
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <!-- JavaScript -->
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js"></script>
+
 
     </body>
 </html>

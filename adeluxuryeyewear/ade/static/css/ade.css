@@ -1,142 +1,329 @@
+body .pusher .full.height {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
- .main-carousel{
-     
-     margin-bottom:100px;
- }
- 
- /*.main-carousel img {
-    display: block;
-    width:100%;
-    height: 800px;
- }*/
+.top-menu{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
 
- .carousel-cell{
-    /*display: block;*/
-    width:100%;
-    height:700px;
-    /* center images in cells with flexbox */
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
+a:hover{
+	background-color: transparent !important;
+}
+
+a:hover{
+	color: rgb(42, 88, 37, 1);
+}
+.logo-size {
+	width: 100px;
+	height: 60px;
+}
+
+.breadcrumb a {
+	color: grey !important;
+}
+
+.ui.table {
+	border: none;
+}
+
+.ui.definition.table tr td.definition,
+.ui.definition.table tr td:first-child:not(.ignored) {
+	background: #fff;
+}
+
+.item-detail h1 {
+	font-family: 'Raleway';
+	font-weight: 100;
+}
+
+.ui.selection.dropdown {
+	padding: 0px !important;
+}
+
+.ui.compact.selection.dropdown {
+	min-width: 200px;
+}
+
+.black-bg {
+	background-color: #0a0808 !important;
+}
+
+.main-product-container {
+	margin-bottom: 200px;
+}
+
+.main-product-container a {
+	color: #000;
+}
+
+.detail-product-container {
+	margin-top: 1.5em;
+}
+
+.main-container{
+	margin-bottom: 200px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.thumbnail a :hover {
+	border: 1px solid #808e99;
+}
+
+.main-carousel {
+	margin-bottom: 100px;
+}
+
+.main-carousel img {
+	display: block;
+	width: 100%;
+}
+
+.carousel-cell {
+	/*display: block;*/
+	width: 100%;
+	/* center images in cells with flexbox */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-cell img {
+	height: 700px;
+}
 
 
- /* removes divider line on menu */
- .ui.menu .item::before{
-     content: none;
- }
+/* removes divider line on menu */
 
- .black-bg{
-    background-color: #000 !important;
-  }
+.ui.menu .item::before {
+	content: none;
+}
 
- .padded-img{
-    padding:20px;
- }
- 
-.white{
-     color: #fff !important;
- }
+.padded-img {
+	padding: 20px;
+}
 
- .center-text{
-    margin-left: auto;
-    margin-right: auto;
- }
+.white {
+	color: #fff !important;
+}
 
- .featured-products{
-    margin-top:20px; 
-    margin-bottom: 30px;
- }
+.center-text {
+	margin-left: auto;
+	margin-right: auto;
+}
 
- .first-banner{
-     margin-bottom:150px;
- }
+.featured-products {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
 
- /* footer */
- .footer a{
-     color: #fff;
- }
+.first-banner {
+	margin-bottom: 150px;
+}
 
- .carousel-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    z-index: 20; /*enables text in front of image */
-    color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
- }
+.demo {
+	width: 420px;
+}
 
- /* big buttons, no circle */
- .flickity-prev-next-button {
-    width: 100px;
-    height: 100px;
-    background: transparent;
- }
- /* arrow color */
- .flickity-prev-next-button .arrow {
-    fill: white;
- }
- .flickity-prev-next-button.no-svg {
-    color: white;
- }
- .flickity-prev-next-button:hover {
-    background: transparent;
- }
- /* hide disabled button */
- .flickity-prev-next-button:disabled {
-    display: none;
- }
+.payment-logo{
+	margin-top: 2em !important;
+}
+/*ul {
+	list-style: none outside none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
 
- /* position dots in gallery */
- .flickity-page-dots {
-    bottom: 5px;
- }
- /* white circles */
- .flickity-page-dots .dot {
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
- }
- /* fill-in selected dot */
- .flickity-page-dots .dot.is-selected {
-    background: white;
- }
+li {
+	display: block;
+	//float: left;
+	margin-right: 6px;
+	cursor: pointer;
+}*/
 
- /* footer */
-.footer .header{
-    font-family: 'Lato';
-    color: #fff;
-    font-weight: 100;
-  }
-  
-   .footer a{
-    color: #fff;
-  }
-  
-  .footer .sm-icon{
-    padding: .50em;
-  }
-  .footer .sm-icon:hover{
-    cursor: pointer;
-    color: rgb(110, 140, 70);
-  }
-  
-  .footer{
-    padding-top: 2em !important;
-  }
-  
-  ::placeholder {
-    color: grey !important;
-    opacity: 1; /* Firefox */
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: grey !important;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: grey !important;
-  }
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+
+.carousel-content {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	color: #fff;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+	/*enables text in front of image */
+	color: white;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+/* big buttons, no circle */
+
+.flickity-prev-next-button {
+	width: 100px;
+	height: 100px;
+	background: transparent;
+}
+
+
+/* arrow color */
+
+.flickity-prev-next-button .arrow {
+	fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+	color: white;
+}
+
+.flickity-prev-next-button:hover {
+	background: transparent;
+}
+
+
+/* hide disabled button */
+
+.flickity-prev-next-button:disabled {
+	display: none;
+}
+
+
+/* position dots in gallery */
+
+.flickity-page-dots {
+	bottom: 5px;
+}
+
+
+/* white circles */
+
+.flickity-page-dots .dot {
+	width: 12px;
+	height: 12px;
+	opacity: 1;
+	background: transparent;
+	border: 2px solid white;
+}
+
+.instafeed a {
+	color: green !important;
+	float: left;
+	margin-bottom: 1.5em;
+}
+
+
+/* fill-in selected dot */
+
+.flickity-page-dots .dot.is-selected {
+	background: white;
+}
+
+
+/* footer */
+
+.footer .header {
+	font-family: 'Lato';
+	color: #fff;
+	font-weight: 100;
+}
+
+.footer a{
+	color: #fff;
+}
+.footer a:hover {
+	color: #fff;
+	color: rgb(42, 88, 37, 1);
+}
+
+.footer .sm-icon {
+	padding: .50em;
+}
+
+.footer .sm-icon:hover {
+	cursor: pointer;
+	color: rgb(110, 140, 70);
+}
+
+.footer {
+	padding-top: 2em !important;
+}
+
+ ::placeholder {
+	color: grey !important;
+	opacity: 1;
+	/* Firefox */
+}
+
+ :-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: grey !important;
+}
+
+ ::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: grey !important;
+}
+
+.item a:hover{
+	color: rgb(42, 88, 37, 1) !important;
+}
+
+
+
+
+/* MOBILE STYLES */
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	/*.logo-size {
+		width: 200px;
+		height: 150px;
+	}*/
+	.carousel-cell img {
+		height: 30%;
+	}
+	/* big buttons, no circle */
+	.flickity-prev-next-button {
+		width: 50px;
+		height: 50px;
+		background: transparent;
+	}
+
+	.icons .column{
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.mobile-hide{
+		display: none !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

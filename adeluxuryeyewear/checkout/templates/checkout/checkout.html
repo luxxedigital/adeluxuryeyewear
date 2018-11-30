@@ -1,2 +1,36 @@
-<!-- We can place all respective 'checkout' app
-    *.html files in this directory. -->
+{% extends 'ade/base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="ui container main-container">
+
+
+
+            <table class="ui table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>product desc + pic</td>
+                        <td>$29.99</td> 
+                        <td><input type="number"></td>
+                        <td>$29.95</td>
+
+                    </tr>
+                </tbody>
+            </table>
+  
+
+</div>
+
+{% endblock %}
