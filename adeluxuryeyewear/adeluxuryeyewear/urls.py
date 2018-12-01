@@ -45,3 +45,8 @@ urlpatterns += [
 urlpatterns += [
     path('bendplay/', include('backend_playground.urls'))
 ]
+
+# Add Django site authentication urls (login, logout, password mgmt)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls'))
+]
