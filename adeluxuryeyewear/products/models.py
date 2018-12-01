@@ -32,6 +32,7 @@ class Product(models.Model):
     gender = models.CharField(max_length=1, choices=gender_options, default='M')
     price = models.FloatField()
     featured = models.BooleanField(default=False)
+    detail_photo_path = models.CharField(max_length=25, default='/')
 
     # This gives the name of the object (the eyewear)
     def __str__(self):
