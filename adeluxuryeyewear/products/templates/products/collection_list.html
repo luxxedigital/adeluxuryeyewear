@@ -50,7 +50,7 @@
             <div class="row">
             {% for item in ade_collection %}
                 <div class="four wide column">
-                    <a href="{% url 'collection__detail' item.eyewear_id %}"><img class="ui medium centered  image" src="/static/products/img/{{ item.image }}"></a>
+                    <a href="{% url 'collection__detail' item.eyewear_id %}"><img class="ui medium centered  image" src="{{ item.image }}"></a>
                     <div class="ui center aligned basic segment">
                         <a href="{% url 'collection__detail' item.eyewear_id %}">{{ item.name }}</a>
                         <a href="{% url 'collection__detail' item.eyewear_id %}"><p>$ {{ item.price }}</p><br></a>
