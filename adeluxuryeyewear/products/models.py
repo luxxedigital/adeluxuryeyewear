@@ -12,20 +12,24 @@ class Product(models.Model):
         ('QL', 'Queens Line'),
         ('UL', 'Unisex Line'),
     )
+    special_collection = (
+        ('WC', 'Wooden Collection'),
+    )
     line = models.CharField(max_length=2, choices=collection, default='KL')
+    special = models.CharField(max_length=2, choices=special_collection, default=None)
     lens_width = models.CharField(max_length=15)
     lens_height = models.CharField(max_length=15)
     bridge_length = models.CharField(max_length=15)
     arm_length = models.CharField(max_length=15)
     image = models.CharField(max_length=150)
-    price = models.FloatField()
+    original_price = models.FloatField()
     gender_options = (
         ('M', 'Male'),
         ('F', 'Female'),
         ('U', 'Unisex'),
     )
     gender = models.CharField(max_length=1, choices=gender_options, default='M')
-    promotional_price = models.FloatField()
+    price = models.FloatField()
     featured = models.BooleanField(default=False)
 
     # This gives the name of the object (the eyewear)
