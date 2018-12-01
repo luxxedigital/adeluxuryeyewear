@@ -38,6 +38,10 @@ class Product(models.Model):
     def __str__(self):
         return self.name
     
+class ProductDetailPhotos(models.Model):
+    """This models stores the detail photos for each product"""
+    detail_photo = models.CharField(max_length=75, default='/')
+    product = models.ForeignKey("Product", on_delete=models.CASCADE)
 
 class Instances(models.Model):
     """This model is to store the physical amount 
