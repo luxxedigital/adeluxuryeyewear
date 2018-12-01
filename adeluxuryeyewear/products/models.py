@@ -13,10 +13,11 @@ class Product(models.Model):
         ('UL', 'Unisex Line'),
     )
     special_collection = (
+        ('NS', 'Not Special'),
         ('WC', 'Wooden Collection'),
     )
     line = models.CharField(max_length=2, choices=collection, default='KL')
-    special = models.CharField(max_length=2, choices=special_collection, default=None)
+    special = models.CharField(max_length=2, choices=special_collection, default='NS')
     lens_width = models.CharField(max_length=15)
     lens_height = models.CharField(max_length=15)
     bridge_length = models.CharField(max_length=15)
