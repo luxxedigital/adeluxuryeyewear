@@ -13,13 +13,21 @@
 
 <div class="full height">
 
+    <div class="ui vertical center aligned basic segment ">
+        <h1 class="line-name">
+            {% if collection == "all" %}ADE collection{% endif %}            
+            {% if collection == "KL" %}Kings Line{% endif %}
+            {% if collection == "QL" %}Queens Line{% endif %}
+            {% if collection == "UL" %}Unisex Line{% endif %}
+        </h1>
+    </div> 
 
-    <div class="ui vertical center aligned basic segment">
+
+    <div class="ui vertical center aligned basic segment drop-dn">
         Filter
-        <select class="ui inline selection compact dropdown" onchange="filterBy(this.value)">
-            <option disabled selected>Pick an option</option>
+        <select id="gender-filter" class="ui inline selection compact dropdown filter-tag" style="margin-right: 5em">
+            <option disabled="disabled" selected="selected">Pick an option</option>
             <option value="{% url 'collection__all' %}">All</option>
-            <option value="{% url 'collection__featured' %}">Featured</option>
             <option value="{% url 'collection__men' %}">Men</option>
             <option value="{% url 'collection__women' %}">Women</option>
             <option value="{% url 'collection__unisex' %}">Unisex</option>
@@ -27,34 +35,32 @@
         </select>
 
         Sort by  
-        <select class="ui inline selection compact dropdown" onchange="filterBy(this.value)">
+        <select class="ui inline selection compact dropdown filter-tag">
             <option disabled selected>Pick an option</option>
-            <option value="2">Alphabetically, A-Z</option>
             <option value="/products/{{ collection }}/priority__low-price">Price: lowest first</option>
             <option value="/products/{{ collection }}/priority__high-price">Price: highest first</option>
         </select>
 
     </div>
-    <div class="ui vertical center aligned basic segment">
-        <h1>
-            {% if collection == "all" %}ADE collection{% endif %}            
-            {% if collection == "featured" %}Featured collection{% endif %}            
-            {% if collection == "KL" %}King's Line{% endif %}
-            {% if collection == "QL" %}Queens's Line{% endif %}
-            {% if collection == "UL" %}Unisex's Line{% endif %}
-        </h1>
-    </div> 
+    
+ 
 
     <div class="ui container main-product-container">
         <div class="ui middle aligned double stackable grid">
             <div class="row">
             {% for item in ade_collection %}
                 <div class="four wide column">
-                    <img class="ui medium centered  image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022">
+                    <a href="{% url 'collection__detail' item.eyewear_id %}"><img class="ui medium centered  image" src="https://cdn.shopify.com/s/files/1/0898/5824/products/Quay_CanYouNot_BlackSmoke_Front_1024x1024.jpg?v=1536686022"></a>
                     <div class="ui center aligned basic segment">
                         <a href="{% url 'collection__detail' item.eyewear_id %}">{{ item.name }}</a>
-                        <p>$ {{ item.price }}</p>
+                        <a href="{% url 'collection__detail' item.eyewear_id %}"><p>$ {{ item.price }}</p><br></a>
+
+                    
+                        <!--<div class="ui button add-to-cart-btn">
+                            <i class="shop icon"></i> Add to Cart
+                        </div>-->
                     </div>
+                    
                 </div>
 
             {% endfor %}

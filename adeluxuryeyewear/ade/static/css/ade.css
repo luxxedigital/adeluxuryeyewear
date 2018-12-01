@@ -8,17 +8,24 @@ body .pusher .full.height {
 	padding-top:0 !important;
 	padding-bottom:0 !important;
 }
-
+a{
+	color:#000;
+}
 a:hover{
 	background-color: transparent !important;
 }
 
 a:hover{
-	color: rgb(42, 88, 37, 1);
+	color: #2d5c26;
 }
 .logo-size {
 	width: 100px;
 	height: 60px;
+}
+
+.add-to-cart-btn{
+	background-color: #2d5c26 !important;
+	color:#fff !important;
 }
 
 .breadcrumb a {
@@ -57,6 +64,12 @@ a:hover{
 
 .main-product-container a {
 	color: #000;
+}
+
+.header-text{
+	font-family: Lato !important;
+	font-weight: 400 !important;
+	color:#2d5c26 !important;
 }
 
 .detail-product-container {
@@ -276,6 +289,19 @@ img {
 	color: rgb(42, 88, 37, 1) !important;
 }
 
+.line-name{
+	font-family: "Lato";
+	font-weight: 300;
+}
+
+.drop-dn, select{
+	color:#767676 !important;
+}
+
+.mobile-show{
+	display: none !important;
+}
+
 
 
 
@@ -288,7 +314,7 @@ img {
 		height: 150px;
 	}*/
 	.carousel-cell img {
-		height: 30%;
+		height: 50%;
 	}
 	/* big buttons, no circle */
 	.flickity-prev-next-button {
@@ -302,8 +328,29 @@ img {
 		padding-right: 0;
 	}
 
+	.shop-banner{
+		position: absolute;
+		left:5%;
+	}
+
 	.mobile-hide{
 		display: none !important;
+	}
+
+	.mobile-show{
+		display: block !important;
+	}
+
+	.carousel-content {
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		color: #fff;
+		transform: translate(-50%, -50%);
+		z-index: 20;
+		/*enables text in front of image */
+		color: white;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 	}
 }
 

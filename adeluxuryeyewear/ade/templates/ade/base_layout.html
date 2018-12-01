@@ -9,8 +9,7 @@
         crossorigin="anonymous"></script>
         
         
-        
-        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Pacifico|Lato:300,400" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">   
@@ -124,11 +123,6 @@
                     
                     <img class="ui tiny centered image payment-logo" src="{% static 'img/payment_images/payment-logo.png' %}">
                         
-                        
-                        
-                
-
-
 
                 
                 </div>
@@ -147,10 +141,11 @@
             });
 
 
-            function filterBy(src){
+             $('.filter-tag').on('change', function(){
+                window.location = $(this).val();
+                
+            });
 
-                window.location = src;
-            }
 
             $(document).ready(function(){
                 
@@ -158,12 +153,12 @@
                 gender = $('#gender-breadcrumb').text();
                 
                 if(gender == 'F'){
-                    $('#gender-breadcrumb').text("QUEEN'S LINE");
-                    $('#gender-breadcrumb').attr('href',"{% url 'collection__men' %}");
+                    $('#gender-breadcrumb').text("QUEENS LINE");
+                    $('#gender-breadcrumb').attr('href',"{% url 'collection__women' %}");
                 }
                 else if (gender == 'M'){
-                    $('#gender-breadcrumb').text("KINGS'S LINE");
-                    $('#gender-breadcrumb').attr('href',"{% url 'collection__women' %}");
+                    $('#gender-breadcrumb').text("KINGSS LINE");
+                    $('#gender-breadcrumb').attr('href',"{% url 'collection__men' %}");
                 }
                 else if (gender == 'U'){
                     $('#gender-breadcrumb').text("UNISEX LINE");
@@ -175,18 +170,15 @@
 
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    controlNav: "thumbnails"
+                    controlNav: "thumbnails",
+                    prevText: "",
+                    nextText: ""
+
                 });
 
             })
             
-            /*
-            $('.thumbnail').find('.image').on('click', function(){
-                    //console.log("clicked")
-                    src = $(this).attr('src')
-                    $('#main-img').attr('src', src )
-                })*/
-
+       
                     
         </script>
 
